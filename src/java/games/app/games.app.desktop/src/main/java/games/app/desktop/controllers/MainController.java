@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * Clase responsible of controlling MainFrame.
- * @author Gustavo M.
+ * @author Gustavo Mejias
  */
 public class MainController {
     
