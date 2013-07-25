@@ -1,14 +1,16 @@
 package games.app.desktop.controllers;
 
 import games.app.desktop.controllers.snake.*;
-import games.app.desktop.models.Game;
-import games.app.desktop.models.snake.SnakeGame;
 import games.app.desktop.views.GameListView;
 import games.app.desktop.views.MainFrame;
 import games.app.desktop.views.snake.SnakeMainView;
+import games.models.snake.SnakeGame;
+import gustav.games.models.abstracts.AbstractGame;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Clase responsible of controlling MainFrame.
@@ -20,9 +22,9 @@ public class MainController {
     private GameListController gameListController;
     private SnakeMainController snakeMainController;
     
-    private List<Game> games = new ArrayList<Game>();
+    private List<AbstractGame> games = new ArrayList();
 
-    public List<Game> getGames() {
+    public List<AbstractGame> getGames() {
         return games;
     }
     
@@ -79,6 +81,9 @@ public class MainController {
      * @param args 
      */
     public static void main(String[] args){
+        
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("games/app/desktop/games.app.desktop-context.xml");
+        
         MainController mainController =  new MainController();
     }
 

@@ -1,7 +1,7 @@
 package games.app.desktop.controllers;
 
-import games.app.desktop.models.Game;
 import games.app.desktop.views.GameListView;
+import gustav.games.models.abstracts.AbstractGame;
 import java.util.List;
 
 /**
@@ -40,7 +40,7 @@ public class GameListController {
         }
     }
 
-    public List<Game> getGameList() {
+    public List<AbstractGame> getGameList() {
         return mainController.getGames();
     }
 }

@@ -1,8 +1,8 @@
 package games.app.desktop.views;
 
 import games.app.desktop.controllers.GameListController;
-import games.app.desktop.models.Game;
 import games.util.desktopapp.MessageDialogHandler;
+import gustav.games.models.abstracts.AbstractGame;
 import java.awt.event.KeyEvent;
 import java.util.List;
 import javax.swing.JList;
@@ -24,7 +24,7 @@ public class GameListView extends javax.swing.JPanel {
      */
     public GameListView(GameListController gameListController) {
         this.gameListController = gameListController;
-        List<Game> games = gameListController.getGameList();
+        List<AbstractGame> games = gameListController.getGameList();
         gameList = new String[games.size()];
         for(int i=0;i<games.size()
                 ;i++){
